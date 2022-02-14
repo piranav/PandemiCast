@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +15,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" id="navtitle" href="#">PandemiCast</a>
+            <a class="navbar-brand" id="navtitle" href="main.html">PandemiCast</a>
         </nav>
 
 
@@ -36,10 +37,7 @@
        </div>
 
 
-
-
-
-
+       <div style="position: relative;">
          <div class="dropdown show">
 
             <a class="class= btn btn-outline-secondary" style= "position: absolute;
@@ -51,18 +49,69 @@
               U.S. States
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <button class="dropdown-item" type="button" id="Alabama">Alabama</button>
+              <button class="dropdown-item" type="button" id="Alaska">Alaska</button>
+              <button class="dropdown-item" type="button" id="Arizona">Arizona</button>
+              <button class="dropdown-item" type="button" id="Arkansas">Arkansas</button>
+              <button class="dropdown-item" type="button" id="California" >California</button>
+              <button class="dropdown-item" type="button" id="Colorado">Colorado</button>
+              <button class="dropdown-item" type="button" id="Connecticut">Connecticut</button>
+              <button class="dropdown-item" type="button" id="Delaware"  >Delaware</button>
+              <button class="dropdown-item" type="button" id="Florida"  >Florida</button>
+              <button class="dropdown-item" type="button" id="Georgia"  >Georgia</button>
+              <button class="dropdown-item" type="button" id="Hawaii"  >Hawaii</button>
+              <button class="dropdown-item" type="button" id="Idaho"  >Idaho</button>
+              <button class="dropdown-item" type="button" id="Illinois"  >Illinois</button>
+              <button class="dropdown-item" type="button" id="Indiana"  >Indiana</button>
+              <button class="dropdown-item" type="button" id="Iowa"  >Iowa</button>
+              <button class="dropdown-item" type="button" id="Kansas"  >Kansas</button>
+              <button class="dropdown-item" type="button" id="Kentucky"  >Kentucky</button>
+              <button class="dropdown-item" type="button" id="Louisiana"  >Louisiana</button>
+              <button class="dropdown-item" type="button" id="Maine"  >Maine</button>
+              <button class="dropdown-item" type="button" id="Maryland"  >Maryland</button>
+              <button class="dropdown-item" type="button" id="Massachusetts"  >Massachusetts</button>
+              <button class="dropdown-item" type="button" id="Michigan"  >Michigan</button>
+              <button class="dropdown-item" type="button" id="Minnesota"  >Minnesota</button>
+              <button class="dropdown-item" type="button" id="Mississippi" >Mississippi</button>
+              <button class="dropdown-item" type="button" id="Missouri" >Missouri</button>
+              <button class="dropdown-item" type="button" id="Montana" >Montana</button>
+              <button class="dropdown-item" type="button" id="Nebraska" >Nebraska</button>
+              <button class="dropdown-item" type="button" id="Nevada" >Nevada</button>
+              <button class="dropdown-item" type="button" id="New_Hampshire" >New Hampshire</button>
+              <button class="dropdown-item" type="button" id="New_Jersey" >New Jersey</button>
+              <button class="dropdown-item" type="button" id="New_Mexico" >New Mexico</button>
+              <button class="dropdown-item" type="button" id="New_York" >New York</button>
+              <button class="dropdown-item" type="button" id="North_Carolina" >North Carolina</button>
+              <button class="dropdown-item" type="button" id="North_Dakota" >North Dakota</button>
+              <button class="dropdown-item" type="button" id="Ohio" >Ohio</button>
+              <button class="dropdown-item" type="button" id="Oklahoma" >Oklahoma</button>
+              <button class="dropdown-item" type="button" id="Oregon" >Oregon</button>
+              <button class="dropdown-item" type="button" id="Pennsylvania" >Pennsylvania</button>
+              <button class="dropdown-item" type="button" id="Rhode_Island" >Rhode Island</button>
+              <button class="dropdown-item" type="button" id="South_Carolina" >South Carolina</button>
+              <button class="dropdown-item" type="button" id="South_Dakota" >South Dakota</button>
+              <button class="dropdown-item" type="button" id="Tennessee" >Tennessee</button>
+              <button class="dropdown-item" type="button" id="Texas" >Texas</button>
+              <button class="dropdown-item" type="button" id="Utah" >Utah</button>
+              <button class="dropdown-item" type="button" id="Vermont" >Vermont</button>
+              <button class="dropdown-item" type="button" id="Virginia" >Virginia</button>
+              <button class="dropdown-item" type="button" id="Washington" >Washington</button>
+              <button class="dropdown-item" type="button" id="West_Virginia" >West Virginia</button>
+              <button class="dropdown-item" type="button" id="Wisconsin" >Wisconsin</button>
+              <button class="dropdown-item" type="button" id="Wyoming" >Wyoming</button>
+
+
             </div>
         </div>
+      </div>
 
-
-
-        
-        <div class="card" style="width: 55rem; margin-top: 50px;">
-            <div class="card-body">
+        <div class="card" style="width: 70rem; height: 50rem;">
+            <div class="card-body" id="main-card1">
+              
                 <h4 class="card-title" style="text-decoration: none; color: #4267B2;">Forecast</h4>
+                <p class="card-text">This graph displays a <b><i>forecast</i></b> for future Covid Rates</p><br><br>
+                <h6 class="card-title" id="replacetext" style="text-decoration: none; color: #9da0a7;"><i>Please select a state from the "U.S. States" dropdown on the left</i></h6>
+                
             </div>
           </div>
     
@@ -81,3 +130,313 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+document.getElementById("Alabama").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/9.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Alaska").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/12.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Arizona").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/14.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Arkansas").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/16.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("California").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/18.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Colorado").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/20.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Connecticut").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/22.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Delaware").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/24.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Florida").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/26.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Georgia").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/28.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Hawaii").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/30.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Idaho").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/32.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Illinois").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/34.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Indiana").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/36.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Iowa").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/38.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Kansas").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/40.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Kentucky").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/42.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Louisiana").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/44.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Maine").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/46.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Maryland").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/48.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Massachusetts").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/50.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Michigan").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/52.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Minnesota").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/54.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Mississippi").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/56.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Missouri").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/58.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Montana").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/60.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Nebraska").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/62.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Nevada").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/64.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("New_Hampshire").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/66.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("New_Jersey").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/68.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("New_Mexico").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/70.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("New_York").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/72.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("North_Carolina").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/74.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("North_Dakota").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/76.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Ohio").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/78.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Oklahoma").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/80.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Oregon").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/82.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Pennsylvania").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/84.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Rhode_Island").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/86.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("South_Carolina").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/88.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("South_Dakota").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/90.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Tennessee").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/92.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Texas").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/94.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Utah").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/96.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Vermont").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/98.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Virginia").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/100.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Washington").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/102.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("West_Virginia").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/104.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Wisconsin").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/106.embed" height="525" width="100%"></iframe>';
+}
+
+document.getElementById("Wyoming").addEventListener("click", clickMe);
+
+function clickMe() {
+  document.getElementById("replacetext").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~vinaysahit/108.embed" height="525" width="100%"></iframe>';
+}
+
+
+</script>
+ 
+
